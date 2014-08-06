@@ -1,478 +1,1083 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		B94650E519925E840003CAD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94650E419925E840003CAD5 /* Foundation.framework */; };
-		B94650E719925E840003CAD5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94650E619925E840003CAD5 /* CoreGraphics.framework */; };
-		B94650E919925E840003CAD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94650E819925E840003CAD5 /* UIKit.framework */; };
-		B94650EB19925E840003CAD5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94650EA19925E840003CAD5 /* CoreData.framework */; };
-		B94650F119925E840003CAD5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B94650EF19925E840003CAD5 /* InfoPlist.strings */; };
-		B94650F319925E840003CAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B94650F219925E840003CAD5 /* main.m */; };
-		B94650F719925E840003CAD5 /* MZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B94650F619925E840003CAD5 /* MZAppDelegate.m */; };
-		B94650FA19925E840003CAD5 /* DBMeizi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B94650F819925E840003CAD5 /* DBMeizi.xcdatamodeld */; };
-		B94650FC19925E840003CAD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94650FB19925E840003CAD5 /* Images.xcassets */; };
-		B946510319925E840003CAD5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B946510219925E840003CAD5 /* XCTest.framework */; };
-		B946510419925E840003CAD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94650E419925E840003CAD5 /* Foundation.framework */; };
-		B946510519925E840003CAD5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94650E819925E840003CAD5 /* UIKit.framework */; };
-		B946510619925E840003CAD5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94650EA19925E840003CAD5 /* CoreData.framework */; };
-		B946510E19925E840003CAD5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B946510C19925E840003CAD5 /* InfoPlist.strings */; };
-		B946511019925E840003CAD5 /* DBMeiziTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B946510F19925E840003CAD5 /* DBMeiziTests.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B946510719925E840003CAD5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B94650D919925E840003CAD5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B94650E019925E840003CAD5;
-			remoteInfo = DBMeizi;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		B94650E119925E840003CAD5 /* DBMeizi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBMeizi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B94650E419925E840003CAD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B94650E619925E840003CAD5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B94650E819925E840003CAD5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B94650EA19925E840003CAD5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		B94650EE19925E840003CAD5 /* DBMeizi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DBMeizi-Info.plist"; sourceTree = "<group>"; };
-		B94650F019925E840003CAD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B94650F219925E840003CAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B94650F419925E840003CAD5 /* DBMeizi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DBMeizi-Prefix.pch"; sourceTree = "<group>"; };
-		B94650F519925E840003CAD5 /* MZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZAppDelegate.h; sourceTree = "<group>"; };
-		B94650F619925E840003CAD5 /* MZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZAppDelegate.m; sourceTree = "<group>"; };
-		B94650F919925E840003CAD5 /* DBMeizi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBMeizi.xcdatamodel; sourceTree = "<group>"; };
-		B94650FB19925E840003CAD5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B946510119925E840003CAD5 /* DBMeiziTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBMeiziTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B946510219925E840003CAD5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B946510B19925E840003CAD5 /* DBMeiziTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DBMeiziTests-Info.plist"; sourceTree = "<group>"; };
-		B946510D19925E840003CAD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B946510F19925E840003CAD5 /* DBMeiziTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBMeiziTests.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		B94650DE19925E840003CAD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B94650E719925E840003CAD5 /* CoreGraphics.framework in Frameworks */,
-				B94650EB19925E840003CAD5 /* CoreData.framework in Frameworks */,
-				B94650E919925E840003CAD5 /* UIKit.framework in Frameworks */,
-				B94650E519925E840003CAD5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B94650FE19925E840003CAD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B946510319925E840003CAD5 /* XCTest.framework in Frameworks */,
-				B946510619925E840003CAD5 /* CoreData.framework in Frameworks */,
-				B946510519925E840003CAD5 /* UIKit.framework in Frameworks */,
-				B946510419925E840003CAD5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		B94650D819925E840003CAD5 = {
-			isa = PBXGroup;
-			children = (
-				B94650EC19925E840003CAD5 /* DBMeizi */,
-				B946510919925E840003CAD5 /* DBMeiziTests */,
-				B94650E319925E840003CAD5 /* Frameworks */,
-				B94650E219925E840003CAD5 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		B94650E219925E840003CAD5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B94650E119925E840003CAD5 /* DBMeizi.app */,
-				B946510119925E840003CAD5 /* DBMeiziTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B94650E319925E840003CAD5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B94650E419925E840003CAD5 /* Foundation.framework */,
-				B94650E619925E840003CAD5 /* CoreGraphics.framework */,
-				B94650E819925E840003CAD5 /* UIKit.framework */,
-				B94650EA19925E840003CAD5 /* CoreData.framework */,
-				B946510219925E840003CAD5 /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B94650EC19925E840003CAD5 /* DBMeizi */ = {
-			isa = PBXGroup;
-			children = (
-				B94650F519925E840003CAD5 /* MZAppDelegate.h */,
-				B94650F619925E840003CAD5 /* MZAppDelegate.m */,
-				B94650FB19925E840003CAD5 /* Images.xcassets */,
-				B94650F819925E840003CAD5 /* DBMeizi.xcdatamodeld */,
-				B94650ED19925E840003CAD5 /* Supporting Files */,
-			);
-			path = DBMeizi;
-			sourceTree = "<group>";
-		};
-		B94650ED19925E840003CAD5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B94650EE19925E840003CAD5 /* DBMeizi-Info.plist */,
-				B94650EF19925E840003CAD5 /* InfoPlist.strings */,
-				B94650F219925E840003CAD5 /* main.m */,
-				B94650F419925E840003CAD5 /* DBMeizi-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B946510919925E840003CAD5 /* DBMeiziTests */ = {
-			isa = PBXGroup;
-			children = (
-				B946510F19925E840003CAD5 /* DBMeiziTests.m */,
-				B946510A19925E840003CAD5 /* Supporting Files */,
-			);
-			path = DBMeiziTests;
-			sourceTree = "<group>";
-		};
-		B946510A19925E840003CAD5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B946510B19925E840003CAD5 /* DBMeiziTests-Info.plist */,
-				B946510C19925E840003CAD5 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		B94650E019925E840003CAD5 /* DBMeizi */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B946511319925E840003CAD5 /* Build configuration list for PBXNativeTarget "DBMeizi" */;
-			buildPhases = (
-				B94650DD19925E840003CAD5 /* Sources */,
-				B94650DE19925E840003CAD5 /* Frameworks */,
-				B94650DF19925E840003CAD5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DBMeizi;
-			productName = DBMeizi;
-			productReference = B94650E119925E840003CAD5 /* DBMeizi.app */;
-			productType = "com.apple.product-type.application";
-		};
-		B946510019925E840003CAD5 /* DBMeiziTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B946511619925E840003CAD5 /* Build configuration list for PBXNativeTarget "DBMeiziTests" */;
-			buildPhases = (
-				B94650FD19925E840003CAD5 /* Sources */,
-				B94650FE19925E840003CAD5 /* Frameworks */,
-				B94650FF19925E840003CAD5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B946510819925E840003CAD5 /* PBXTargetDependency */,
-			);
-			name = DBMeiziTests;
-			productName = DBMeiziTests;
-			productReference = B946510119925E840003CAD5 /* DBMeiziTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		B94650D919925E840003CAD5 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = MZ;
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = hxx;
-				TargetAttributes = {
-					B946510019925E840003CAD5 = {
-						TestTargetID = B94650E019925E840003CAD5;
-					};
-				};
-			};
-			buildConfigurationList = B94650DC19925E840003CAD5 /* Build configuration list for PBXProject "DBMeizi" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = B94650D819925E840003CAD5;
-			productRefGroup = B94650E219925E840003CAD5 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				B94650E019925E840003CAD5 /* DBMeizi */,
-				B946510019925E840003CAD5 /* DBMeiziTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		B94650DF19925E840003CAD5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B94650F119925E840003CAD5 /* InfoPlist.strings in Resources */,
-				B94650FC19925E840003CAD5 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B94650FF19925E840003CAD5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B946510E19925E840003CAD5 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		B94650DD19925E840003CAD5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B94650F319925E840003CAD5 /* main.m in Sources */,
-				B94650FA19925E840003CAD5 /* DBMeizi.xcdatamodeld in Sources */,
-				B94650F719925E840003CAD5 /* MZAppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B94650FD19925E840003CAD5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B946511019925E840003CAD5 /* DBMeiziTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B946510819925E840003CAD5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B94650E019925E840003CAD5 /* DBMeizi */;
-			targetProxy = B946510719925E840003CAD5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B94650EF19925E840003CAD5 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B94650F019925E840003CAD5 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B946510C19925E840003CAD5 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B946510D19925E840003CAD5 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		B946511119925E840003CAD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B946511219925E840003CAD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B946511419925E840003CAD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DBMeizi/DBMeizi-Prefix.pch";
-				INFOPLIST_FILE = "DBMeizi/DBMeizi-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		B946511519925E840003CAD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DBMeizi/DBMeizi-Prefix.pch";
-				INFOPLIST_FILE = "DBMeizi/DBMeizi-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		B946511719925E840003CAD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DBMeizi.app/DBMeizi";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DBMeizi/DBMeizi-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "DBMeiziTests/DBMeiziTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B946511819925E840003CAD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DBMeizi.app/DBMeizi";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DBMeizi/DBMeizi-Prefix.pch";
-				INFOPLIST_FILE = "DBMeiziTests/DBMeiziTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		B94650DC19925E840003CAD5 /* Build configuration list for PBXProject "DBMeizi" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B946511119925E840003CAD5 /* Debug */,
-				B946511219925E840003CAD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B946511319925E840003CAD5 /* Build configuration list for PBXNativeTarget "DBMeizi" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B946511419925E840003CAD5 /* Debug */,
-				B946511519925E840003CAD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		B946511619925E840003CAD5 /* Build configuration list for PBXNativeTarget "DBMeiziTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B946511719925E840003CAD5 /* Debug */,
-				B946511819925E840003CAD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B94650F819925E840003CAD5 /* DBMeizi.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B94650F919925E840003CAD5 /* DBMeizi.xcdatamodel */,
-			);
-			currentVersion = B94650F919925E840003CAD5 /* DBMeizi.xcdatamodel */;
-			path = DBMeizi.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = B94650D919925E840003CAD5 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>09A6D6A6E3B64B1DB07D7351</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-DBMeizi.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-DBMeizi.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>994C1F6A09744F049AE97316</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F9FFFE03BF664457838679EA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650D819925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B94650EC19925E840003CAD5</string>
+				<string>B946510919925E840003CAD5</string>
+				<string>B94650E319925E840003CAD5</string>
+				<string>B94650E219925E840003CAD5</string>
+				<string>09A6D6A6E3B64B1DB07D7351</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650D919925E840003CAD5</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>MZ</string>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>hxx</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>B946510019925E840003CAD5</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>B94650E019925E840003CAD5</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>B94650DC19925E840003CAD5</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>B94650D819925E840003CAD5</string>
+			<key>productRefGroup</key>
+			<string>B94650E219925E840003CAD5</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>B94650E019925E840003CAD5</string>
+				<string>B946510019925E840003CAD5</string>
+			</array>
+		</dict>
+		<key>B94650DC19925E840003CAD5</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>B946511119925E840003CAD5</string>
+				<string>B946511219925E840003CAD5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B94650DD19925E840003CAD5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B94650F319925E840003CAD5</string>
+				<string>B94650FA19925E840003CAD5</string>
+				<string>B94650F719925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B94650DE19925E840003CAD5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B94650E719925E840003CAD5</string>
+				<string>B94650EB19925E840003CAD5</string>
+				<string>B94650E919925E840003CAD5</string>
+				<string>B94650E519925E840003CAD5</string>
+				<string>994C1F6A09744F049AE97316</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B94650DF19925E840003CAD5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B94650F119925E840003CAD5</string>
+				<string>B94650FC19925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B94650E019925E840003CAD5</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>B946511319925E840003CAD5</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C559A9087520407F92C63699</string>
+				<string>B94650DD19925E840003CAD5</string>
+				<string>B94650DE19925E840003CAD5</string>
+				<string>B94650DF19925E840003CAD5</string>
+				<string>F440A9A9F73A4D7A8559D406</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>DBMeizi</string>
+			<key>productName</key>
+			<string>DBMeizi</string>
+			<key>productReference</key>
+			<string>B94650E119925E840003CAD5</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>B94650E119925E840003CAD5</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>DBMeizi.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B94650E219925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B94650E119925E840003CAD5</string>
+				<string>B946510119925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650E319925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B94650E419925E840003CAD5</string>
+				<string>B94650E619925E840003CAD5</string>
+				<string>B94650E819925E840003CAD5</string>
+				<string>B94650EA19925E840003CAD5</string>
+				<string>B946510219925E840003CAD5</string>
+				<string>F9FFFE03BF664457838679EA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650E419925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>B94650E519925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650E419925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650E619925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>B94650E719925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650E619925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650E819925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>B94650E919925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650E819925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650EA19925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>B94650EB19925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650EA19925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650EC19925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B94650F519925E840003CAD5</string>
+				<string>B94650F619925E840003CAD5</string>
+				<string>B94650FB19925E840003CAD5</string>
+				<string>B94650F819925E840003CAD5</string>
+				<string>B94650ED19925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>DBMeizi</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650ED19925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B94650EE19925E840003CAD5</string>
+				<string>B94650EF19925E840003CAD5</string>
+				<string>B94650F219925E840003CAD5</string>
+				<string>B94650F419925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650EE19925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>DBMeizi-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650EF19925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B94650F019925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650F019925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650F119925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650EF19925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650F219925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650F319925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650F219925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650F419925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DBMeizi-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650F519925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MZAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650F619925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MZAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650F719925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650F619925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650F819925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B94650F919925E840003CAD5</string>
+			</array>
+			<key>currentVersion</key>
+			<string>B94650F919925E840003CAD5</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>path</key>
+			<string>DBMeizi.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>B94650F919925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>DBMeizi.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650FA19925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650F819925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650FB19925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B94650FC19925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650FB19925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B94650FD19925E840003CAD5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B946511019925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B94650FE19925E840003CAD5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B946510319925E840003CAD5</string>
+				<string>B946510619925E840003CAD5</string>
+				<string>B946510519925E840003CAD5</string>
+				<string>B946510419925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B94650FF19925E840003CAD5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B946510E19925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B946510019925E840003CAD5</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>B946511619925E840003CAD5</string>
+			<key>buildPhases</key>
+			<array>
+				<string>B94650FD19925E840003CAD5</string>
+				<string>B94650FE19925E840003CAD5</string>
+				<string>B94650FF19925E840003CAD5</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>B946510819925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>DBMeiziTests</string>
+			<key>productName</key>
+			<string>DBMeiziTests</string>
+			<key>productReference</key>
+			<string>B946510119925E840003CAD5</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>B946510119925E840003CAD5</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>DBMeiziTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B946510219925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>B946510319925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B946510219925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B946510419925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650E419925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B946510519925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650E819925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B946510619925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94650EA19925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B946510719925E840003CAD5</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>B94650D919925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B94650E019925E840003CAD5</string>
+			<key>remoteInfo</key>
+			<string>DBMeizi</string>
+		</dict>
+		<key>B946510819925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>B94650E019925E840003CAD5</string>
+			<key>targetProxy</key>
+			<string>B946510719925E840003CAD5</string>
+		</dict>
+		<key>B946510919925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B946510F19925E840003CAD5</string>
+				<string>B946510A19925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>DBMeiziTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B946510A19925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B946510B19925E840003CAD5</string>
+				<string>B946510C19925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B946510B19925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>DBMeiziTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B946510C19925E840003CAD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B946510D19925E840003CAD5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B946510D19925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B946510E19925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B946510C19925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B946510F19925E840003CAD5</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DBMeiziTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B946511019925E840003CAD5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B946510F19925E840003CAD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B946511119925E840003CAD5</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>B946511219925E840003CAD5</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B946511319925E840003CAD5</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>B946511419925E840003CAD5</string>
+				<string>B946511519925E840003CAD5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B946511419925E840003CAD5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>09A6D6A6E3B64B1DB07D7351</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>DBMeizi/DBMeizi-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DBMeizi/DBMeizi-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>B946511519925E840003CAD5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>09A6D6A6E3B64B1DB07D7351</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>DBMeizi/DBMeizi-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DBMeizi/DBMeizi-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B946511619925E840003CAD5</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>B946511719925E840003CAD5</string>
+				<string>B946511819925E840003CAD5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B946511719925E840003CAD5</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/DBMeizi.app/DBMeizi</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>DBMeizi/DBMeizi-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>DBMeiziTests/DBMeiziTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>B946511819925E840003CAD5</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/DBMeizi.app/DBMeizi</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>DBMeizi/DBMeizi-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DBMeiziTests/DBMeiziTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C559A9087520407F92C63699</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>F440A9A9F73A4D7A8559D406</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-DBMeizi-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>F9FFFE03BF664457838679EA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-DBMeizi.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>B94650D919925E840003CAD5</string>
+</dict>
+</plist>

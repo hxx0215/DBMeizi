@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-DBMeizi-libextobjc.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-DBMeizi-libffi.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-DBMeizi.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>16F716D15B0E41A4BCC57619</key>
+		<key>18DEC0625CC64E6CA191A3E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>659AE5BDBE194D9998C7D42B</key>
+		<key>5D5F4B36B3214A1CBC7D032F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76731F553BAE43F98E776C19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7D8FE86284FC4B6A85AC0298</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,11 +8,12 @@
 
 #import "MZHomeViewController.h"
 #import "MZHomeFlowLayout.h"
+#import "MZHomeCell.h"
 
 @interface MZHomeViewController ()
 
 @end
-
+static NSString *CellIdentifier = @"Cell";
 @implementation MZHomeViewController
 
 - (id)init{
@@ -29,6 +30,13 @@
     
     self.title = @"DBMeizi";
     
+    [self.collectionView registerClass:[MZHomeCell class] forCellWithReuseIdentifier:CellIdentifier];
+    
+    @weakify(self);
+    [RACObserve(self, photoArray) subscribeNext:^(id x){
+        @strongify(self);
+        [self.collectionView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning

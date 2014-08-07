@@ -38,4 +38,9 @@
     }] setKeyPath:@keypath(self.imageView, image) onObject:self.imageView];
 }
 
+- (void)prepareForReuse{
+    [super prepareForReuse];
+    
+    [self.subscription dispose], self.subscription = nil;
+}
 @end

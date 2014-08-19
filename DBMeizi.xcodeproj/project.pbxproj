@@ -28,6 +28,10 @@
 		B9465120199265220003CAD5 /* MZHomeFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B946511F199265220003CAD5 /* MZHomeFlowLayout.m */; };
 		B94651231992663C0003CAD5 /* MZHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B94651221992663C0003CAD5 /* MZHomeCell.m */; };
 		B9465126199266870003CAD5 /* MZPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B9465125199266870003CAD5 /* MZPhotoModel.m */; };
+		B94651291993BED20003CAD5 /* MZPhotoImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = B94651281993BED20003CAD5 /* MZPhotoImporter.m */; };
+		B9D0EAF319A31AB7004A7CD3 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0EAEE19A31AB7004A7CD3 /* TFHpple.m */; };
+		B9D0EAF419A31AB7004A7CD3 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0EAF019A31AB7004A7CD3 /* TFHppleElement.m */; };
+		B9D0EAF519A31AB7004A7CD3 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0EAF219A31AB7004A7CD3 /* XPathQuery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,14 @@
 		B94651221992663C0003CAD5 /* MZHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZHomeCell.m; sourceTree = "<group>"; };
 		B9465124199266870003CAD5 /* MZPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPhotoModel.h; sourceTree = "<group>"; };
 		B9465125199266870003CAD5 /* MZPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPhotoModel.m; sourceTree = "<group>"; };
+		B94651271993BED20003CAD5 /* MZPhotoImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZPhotoImporter.h; sourceTree = "<group>"; };
+		B94651281993BED20003CAD5 /* MZPhotoImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZPhotoImporter.m; sourceTree = "<group>"; };
+		B9D0EAED19A31AB7004A7CD3 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		B9D0EAEE19A31AB7004A7CD3 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		B9D0EAEF19A31AB7004A7CD3 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		B9D0EAF019A31AB7004A7CD3 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		B9D0EAF119A31AB7004A7CD3 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		B9D0EAF219A31AB7004A7CD3 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		F9FFFE03BF664457838679EA /* libPods-DBMeizi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DBMeizi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +159,9 @@
 				B94651221992663C0003CAD5 /* MZHomeCell.m */,
 				B9465124199266870003CAD5 /* MZPhotoModel.h */,
 				B9465125199266870003CAD5 /* MZPhotoModel.m */,
+				B94651271993BED20003CAD5 /* MZPhotoImporter.h */,
+				B94651281993BED20003CAD5 /* MZPhotoImporter.m */,
+				B9D0EAEC19A319B8004A7CD3 /* xml */,
 				B94650FB19925E840003CAD5 /* Images.xcassets */,
 				B94650F819925E840003CAD5 /* DBMeizi.xcdatamodeld */,
 				B94650ED19925E840003CAD5 /* Supporting Files */,
@@ -181,6 +196,19 @@
 				B946510C19925E840003CAD5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9D0EAEC19A319B8004A7CD3 /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				B9D0EAED19A31AB7004A7CD3 /* TFHpple.h */,
+				B9D0EAEE19A31AB7004A7CD3 /* TFHpple.m */,
+				B9D0EAEF19A31AB7004A7CD3 /* TFHppleElement.h */,
+				B9D0EAF019A31AB7004A7CD3 /* TFHppleElement.m */,
+				B9D0EAF119A31AB7004A7CD3 /* XPathQuery.h */,
+				B9D0EAF219A31AB7004A7CD3 /* XPathQuery.m */,
+			);
+			name = xml;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,9 +346,13 @@
 				B946511D199264300003CAD5 /* MZHomeViewController.m in Sources */,
 				B94651231992663C0003CAD5 /* MZHomeCell.m in Sources */,
 				B9465120199265220003CAD5 /* MZHomeFlowLayout.m in Sources */,
+				B9D0EAF519A31AB7004A7CD3 /* XPathQuery.m in Sources */,
+				B9D0EAF419A31AB7004A7CD3 /* TFHppleElement.m in Sources */,
+				B9D0EAF319A31AB7004A7CD3 /* TFHpple.m in Sources */,
 				B94650F319925E840003CAD5 /* main.m in Sources */,
 				B94650FA19925E840003CAD5 /* DBMeizi.xcdatamodeld in Sources */,
 				B94650F719925E840003CAD5 /* MZAppDelegate.m in Sources */,
+				B94651291993BED20003CAD5 /* MZPhotoImporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +474,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DBMeizi/DBMeizi-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/libextobjc\"",
+					"\"${PODS_ROOT}/Headers/libffi\"",
+					"\"${SDKROOT}/usr/include/libxml2\"",
+				);
 				INFOPLIST_FILE = "DBMeizi/DBMeizi-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -456,6 +496,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DBMeizi/DBMeizi-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/libextobjc\"",
+					"\"${PODS_ROOT}/Headers/libffi\"",
+					"\"${SDKROOT}/usr/include/libxml2\"",
+				);
 				INFOPLIST_FILE = "DBMeizi/DBMeizi-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

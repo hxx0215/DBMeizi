@@ -9,6 +9,7 @@
 #import "MZHomeViewController.h"
 #import "MZHomeFlowLayout.h"
 #import "MZHomeCell.h"
+#import "MZPhotoImporter.h"
 
 @interface MZHomeViewController ()
 
@@ -37,6 +38,7 @@ static NSString *CellIdentifier = @"Cell";
         @strongify(self);
         [self.collectionView reloadData];
     }];
+    [self loadPhotos];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +47,13 @@ static NSString *CellIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
+- (void)loadPhotos{
+    [[MZPhotoImporter importPhotos] subscribeNext:^(id x){
+        NSLog(@"x:%@",x);
+    }error:^(NSError *error){
+        NSLog(@"%@",error);
+    }];
+}
 /*
 #pragma mark - Navigation
 

@@ -8,6 +8,7 @@
 
 #import "MZPhotoImporter.h"
 #import "TFHpple.h"
+#import "MZPhotoModel.h"
 
 @implementation MZPhotoImporter
 + (RACReplaySubject *)importPhotos{
@@ -17,8 +18,15 @@
         if (data){
 //            id results = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSArray *imagesData = [self parseData:data];
-            NSMutableArray *images = [self downLoadPicture:imagesData];
-            [subject sendNext:images];
+//            NSMutableArray *images = [self downLoadPicture:imagesData];
+//            [subject sendNext:images];
+            [subject sendNext:[[[imagesData rac_sequence] map:^id(id value){
+                MZPhotoModel *model = [MZPhotoModel new];
+                [self configModel:model withTFHppleElement:value];
+//                NSLog(@"%@",value);
+                [self downloadThumbnailForPhotoModel:model];
+                return model;
+            }]array]];
             [subject sendCompleted];
         }
         else{
@@ -31,7 +39,33 @@
 + (NSURLRequest *)allPhotoURLRequest{
     return [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://dbmeizi.com"]];
 }
++ (void)configModel:(MZPhotoModel *)model withTFHppleElement:(id)value{
+    model.dataBigImg = [value objectForKey:@"data-bigimg"];
+    model.dataHeight = [[value objectForKey:@"data-height"] floatValue];
+    model.dataId = [[value objectForKey:@"data-id"] integerValue];
+    model.dataTitle = [value objectForKey:@"data-title"];
+    model.dataUrl = [value objectForKey:@"data-url"];
+    model.dataUserurl = [value objectForKey:@"data-userurl"];
+    model.dataWidth = [[value objectForKey:@"data-width"] floatValue];
+    model.src = [value objectForKey:@"src"];
+}
 
++ (void)downloadThumbnailForPhotoModel:(MZPhotoModel *)photoModel{
+    NSString *prefix = [photoModel.src substringToIndex:4];
+    NSString *url = photoModel.src;
+    if (![prefix isEqualToString:@"http"])
+        url = [@"http://dbmeizi.com" stringByAppendingString:url];
+    [self download:url withCompletion:^(NSData *data){
+        photoModel.thumbnailData = data;
+    }];
+}
++ (void)download:(NSString *)urlString withCompletion:(void (^)(NSData *data))completion{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
+        if (completion)
+            completion(data);
+    }];
+}
 + (NSArray*)parseData:(NSData*) data
 {
     TFHpple *doc = [[TFHpple alloc] initWithHTMLData:data];

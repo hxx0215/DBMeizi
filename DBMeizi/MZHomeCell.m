@@ -24,6 +24,7 @@
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:imageView];
         self.imageView = imageView;
     }
@@ -37,6 +38,7 @@
         return [UIImage imageWithData:value];
     }] setKeyPath:@keypath(self.imageView, image) onObject:self.imageView];
 }
+
 
 - (void)prepareForReuse{
     [super prepareForReuse];

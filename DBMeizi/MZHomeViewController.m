@@ -16,7 +16,7 @@
 @end
 static NSString *CellIdentifier = @"Cell";
 @implementation MZHomeViewController
-
+@synthesize photoArray = _photoArray;
 - (id)init{
     MZHomeFlowLayout *flowLayout = [[MZHomeFlowLayout alloc]init];
     self = [self initWithCollectionViewLayout:flowLayout];
@@ -30,7 +30,7 @@ static NSString *CellIdentifier = @"Cell";
     // Do any additional setup after loading the view.
     
     self.title = @"DBMeizi";
-    
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[MZHomeCell class] forCellWithReuseIdentifier:CellIdentifier];
     
     @weakify(self);
@@ -49,7 +49,7 @@ static NSString *CellIdentifier = @"Cell";
 
 - (void)loadPhotos{
     [[MZPhotoImporter importPhotos] subscribeNext:^(id x){
-        NSLog(@"x:%@",x);
+        self.photoArray = x;
     }error:^(NSError *error){
         NSLog(@"%@",error);
     }];
@@ -64,5 +64,18 @@ static NSString *CellIdentifier = @"Cell";
     // Pass the selected object to the new view controller.
 }
 */
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.photoArray.count;
+}
 
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    MZHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    [cell setPhotoModel:self.photoArray[indexPath.row]];
+//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+//    UIImageView *imgView = [[UIImageView alloc] initWithImage:self.photoArray[indexPath.row]];
+//    imgView.contentMode = UIViewContentModeScaleAspectFit;
+//    imgView.frame = CGRectMake(0, 0, 145, 145);
+//    [cell.contentView addSubview:imgView];
+    return cell;
+}
 @end

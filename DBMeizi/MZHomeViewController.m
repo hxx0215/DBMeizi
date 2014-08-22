@@ -10,6 +10,7 @@
 #import "MZHomeFlowLayout.h"
 #import "MZHomeCell.h"
 #import "MZPhotoImporter.h"
+#import "MZPhotoModel.h"
 
 @interface MZHomeViewController ()
 
@@ -77,5 +78,12 @@ static NSString *CellIdentifier = @"Cell";
 //    imgView.frame = CGRectMake(0, 0, 145, 145);
 //    [cell.contentView addSubview:imgView];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+//    MZHomeCell *cell =(MZHomeCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    MZPhotoModel *model = (MZPhotoModel *)self.photoArray[indexPath.row];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:model.dataTitle delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
 }
 @end

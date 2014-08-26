@@ -11,9 +11,9 @@
 #import "MZPhotoModel.h"
 
 @implementation MZPhotoImporter
-+ (RACReplaySubject *)importPhotos{
++ (RACReplaySubject *)importPhotos:(NSInteger)pageIndex{
     RACReplaySubject *subject = [RACReplaySubject subject];
-    NSURLRequest *request = [self allPhotoURLRequest];
+    NSURLRequest *request = [self allPhotoURLRequest:pageIndex];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError){
         if (data){
 //            id results = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
@@ -23,7 +23,6 @@
             [subject sendNext:[[[imagesData rac_sequence] map:^id(id value){
                 MZPhotoModel *model = [MZPhotoModel new];
                 [self configModel:model withTFHppleElement:value];
-                NSLog(@"%@",value);
                 [self downloadThumbnailForPhotoModel:model];
                 return model;
             }]array]];
@@ -36,8 +35,10 @@
     return subject;
 }
 
-+ (NSURLRequest *)allPhotoURLRequest{
-    return [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://dbmeizi.com"]];
++ (NSURLRequest *)allPhotoURLRequest:(NSInteger)pageIndex{
+    NSString *urlString = [NSString stringWithFormat:@"http://dbmeizi.com?p=%d",pageIndex];
+    NSLog(@"the url is :%@",urlString);
+    return [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
 }
 + (void)configModel:(MZPhotoModel *)model withTFHppleElement:(id)value{
     model.dataBigImg = [value objectForKey:@"data-bigimg"];
@@ -48,7 +49,6 @@
     model.dataUserurl = [value objectForKey:@"data-userurl"];
     model.dataWidth = [[value objectForKey:@"data-width"] floatValue];
     model.src = [value objectForKey:@"src"];
-    NSLog(@"%@",value);
 }
 
 + (void)downloadThumbnailForPhotoModel:(MZPhotoModel *)photoModel{

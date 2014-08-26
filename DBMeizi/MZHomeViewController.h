@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MZHomeViewController : UICollectionViewController
-@property (nonatomic, strong)NSArray *photoArray;
+@property (nonatomic, strong)NSMutableArray *photoArray;
 @end

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface MZPhotoImporter : NSObject
-+ (RACSignal *)importPhotos;
++ (RACSignal *)importPhotos:(NSInteger)pageIndex;
 @end

@@ -13,7 +13,9 @@
 #import "MZPhotoModel.h"
 
 @interface MZHomeViewController ()
-
+@property (nonatomic, strong)UIRefreshControl *refresh;
+@property (nonatomic, assign)NSInteger curIndex;
+@property (nonatomic, assign)BOOL isLoadComplete;
 @end
 static NSString *CellIdentifier = @"Cell";
 @implementation MZHomeViewController
@@ -22,6 +24,7 @@ static NSString *CellIdentifier = @"Cell";
     MZHomeFlowLayout *flowLayout = [[MZHomeFlowLayout alloc]init];
     self = [self initWithCollectionViewLayout:flowLayout];
     if (!self) return nil;
+    self.curIndex = 0;
     return self;
 }
 
@@ -39,7 +42,12 @@ static NSString *CellIdentifier = @"Cell";
         @strongify(self);
         [self.collectionView reloadData];
     }];
-    [self loadPhotos];
+    [self loadPhotos:self.curIndex];
+    
+    self.refresh = [[UIRefreshControl alloc] init];
+    [_refresh addTarget:self action:@selector(refreshPhoto:) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.refresh];
+    self.isLoadComplete = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,12 +56,30 @@ static NSString *CellIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
-- (void)loadPhotos{
-    [[MZPhotoImporter importPhotos] subscribeNext:^(id x){
-        self.photoArray = x;
+- (void)loadPhotos:(NSInteger)pageIndex{
+    NSLog(@"pageIndex:%d",pageIndex);
+    [[MZPhotoImporter importPhotos:pageIndex] subscribeNext:^(id x){
+        if (!self.photoArray || pageIndex == 0)
+            self.photoArray = [x mutableCopy];
+        else
+            [self.photoArray addObjectsFromArray:x];
     }error:^(NSError *error){
         NSLog(@"%@",error);
+    }completed:^(void){
+        [self loadCompleted];
     }];
+}
+- (void)refreshPhoto:(id)sender{
+    [self loadPhotos:0];
+}
+- (void)loadCompleted{
+    NSLog(@"loadcompleted");
+    [self.collectionView reloadData];
+    [self.refresh endRefreshing];
+    self.isLoadComplete = YES;
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 }
 /*
 #pragma mark - Navigation
@@ -65,6 +91,20 @@ static NSString *CellIdentifier = @"Cell";
     // Pass the selected object to the new view controller.
 }
 */
+#pragma scroll delegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    float ScrollAllHeight =self.collectionView.contentOffset.y+self.collectionView.frame.size.height;
+    float tabviewSizeHeight =self.collectionView.contentSize.height;
+   if ((ScrollAllHeight>tabviewSizeHeight+50)&&self.isLoadComplete)
+   {
+       NSLog(@"nextpage");
+       self.curIndex ++;
+       self.isLoadComplete = NO;
+       [self loadPhotos:self.curIndex];
+//       [self.nextPageActivityIndicator startAnimating];
+   }
+}
+#pragma collection delegate && datasource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.photoArray.count;
 }
@@ -72,6 +112,7 @@ static NSString *CellIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     MZHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     [cell setPhotoModel:self.photoArray[indexPath.row]];
+  
 //    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
 //    UIImageView *imgView = [[UIImageView alloc] initWithImage:self.photoArray[indexPath.row]];
 //    imgView.contentMode = UIViewContentModeScaleAspectFit;
@@ -79,11 +120,12 @@ static NSString *CellIdentifier = @"Cell";
 //    [cell.contentView addSubview:imgView];
     return cell;
 }
-
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 //    MZHomeCell *cell =(MZHomeCell *)[collectionView cellForItemAtIndexPath:indexPath];
     MZPhotoModel *model = (MZPhotoModel *)self.photoArray[indexPath.row];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:model.dataTitle delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
 }
+
+
 @end

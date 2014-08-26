@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-DBMeizi-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-DBMeizi-libextobjc.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18DEC0625CC64E6CA191A3E6</key>
+		<key>0E05566FF9DD4613BF8CFDE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D5F4B36B3214A1CBC7D032F</key>
+		<key>2F20F9E9054946648B005B4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>76731F553BAE43F98E776C19</key>
+		<key>5E67A02101E9432B80EB5ACF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D8FE86284FC4B6A85AC0298</key>
+		<key>ACA57FEF78964586972F0CAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB831360529B43C1A9C4A29F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

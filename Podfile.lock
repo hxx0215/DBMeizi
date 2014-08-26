@@ -91,14 +91,19 @@ PODS:
   - ReactiveCocoa/no-arc (2.3)
   - ReactiveCocoa/UI (2.3):
     - ReactiveCocoa/Core
+  - SDWebImage (3.6):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.6)
 
 DEPENDENCIES:
   - libextobjc (= 0.3)
   - ReactiveCocoa
+  - SDWebImage (~> 3.6)
 
 SPEC CHECKSUMS:
   libextobjc: 820a79dbbbc498611e04fffd07d2d52a5588e7ac
   libffi: 64ef39353e747bb2b25e1026afd96a157bf9231c
   ReactiveCocoa: dde7b11a14954edf789e7343b2c32e595caabd01
+  SDWebImage: 7eb273e54ca8a2e506ad9bd5e80c35b2a4d7c95e
 
 COCOAPODS: 0.32.1

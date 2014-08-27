@@ -9,6 +9,7 @@
 #import "MZPhotoImporter.h"
 #import "TFHpple.h"
 #import "MZPhotoModel.h"
+#import "SDWebImageManager.h"
 
 @implementation MZPhotoImporter
 + (RACReplaySubject *)importPhotos:(NSInteger)pageIndex{
@@ -56,8 +57,16 @@
     NSString *url = photoModel.src;
     if (![prefix isEqualToString:@"http"])
         url = [@"http://dbmeizi.com" stringByAppendingString:url];
-    [self download:url withCompletion:^(NSData *data){
-        photoModel.thumbnailData = data;
+//    [self download:url withCompletion:^(NSData *data){
+//        photoModel.thumbnailData = data;
+//    }];
+    [[SDWebImageManager sharedManager] downloadWithURL:[NSURL URLWithString:url] options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize){
+        NSLog(@"receivedSize:%d,expectedSize:%d",receivedSize,expectedSize);
+    } completed:^(UIImage *image,NSError *error,SDImageCacheType cacheType,BOOL finished){
+        NSLog(@"cacheType:%d",cacheType);
+        photoModel.thumbnailData = UIImagePNGRepresentation(image);
+        if (!photoModel.thumbnailData)
+            photoModel.thumbnailData = UIImageJPEGRepresentation(image,1.0);
     }];
 }
 + (void)download:(NSString *)urlString withCompletion:(void (^)(NSData *data))completion{

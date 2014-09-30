@@ -32,6 +32,7 @@
 		B9D0EAF319A31AB7004A7CD3 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0EAEE19A31AB7004A7CD3 /* TFHpple.m */; };
 		B9D0EAF419A31AB7004A7CD3 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0EAF019A31AB7004A7CD3 /* TFHppleElement.m */; };
 		B9D0EAF519A31AB7004A7CD3 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0EAF219A31AB7004A7CD3 /* XPathQuery.m */; };
+		B9DC025D19B2C2C20045F171 /* MZSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DC025C19B2C2C20045F171 /* MZSideMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		B9D0EAF019A31AB7004A7CD3 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
 		B9D0EAF119A31AB7004A7CD3 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		B9D0EAF219A31AB7004A7CD3 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		B9DC025B19B2C2C20045F171 /* MZSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSideMenuView.h; sourceTree = "<group>"; };
+		B9DC025C19B2C2C20045F171 /* MZSideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSideMenuView.m; sourceTree = "<group>"; };
 		F9FFFE03BF664457838679EA /* libPods-DBMeizi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DBMeizi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,6 +164,8 @@
 				B9465125199266870003CAD5 /* MZPhotoModel.m */,
 				B94651271993BED20003CAD5 /* MZPhotoImporter.h */,
 				B94651281993BED20003CAD5 /* MZPhotoImporter.m */,
+				B9DC025B19B2C2C20045F171 /* MZSideMenuView.h */,
+				B9DC025C19B2C2C20045F171 /* MZSideMenuView.m */,
 				B9D0EAEC19A319B8004A7CD3 /* xml */,
 				B94650FB19925E840003CAD5 /* Images.xcassets */,
 				B94650F819925E840003CAD5 /* DBMeizi.xcdatamodeld */,
@@ -353,6 +358,7 @@
 				B94650FA19925E840003CAD5 /* DBMeizi.xcdatamodeld in Sources */,
 				B94650F719925E840003CAD5 /* MZAppDelegate.m in Sources */,
 				B94651291993BED20003CAD5 /* MZPhotoImporter.m in Sources */,
+				B9DC025D19B2C2C20045F171 /* MZSideMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Deying Yu (EG87838K93)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DBMeizi/DBMeizi-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -484,6 +491,7 @@
 				);
 				INFOPLIST_FILE = "DBMeizi/DBMeizi-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "65dbc478-801e-4343-af7c-860b31d9250e";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -494,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Deying Yu (EG87838K93)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DBMeizi/DBMeizi-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -506,6 +515,7 @@
 				);
 				INFOPLIST_FILE = "DBMeizi/DBMeizi-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "65dbc478-801e-4343-af7c-860b31d9250e";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

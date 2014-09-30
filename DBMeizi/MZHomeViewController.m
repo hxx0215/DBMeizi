@@ -12,10 +12,12 @@
 #import "MZPhotoImporter.h"
 #import "MZPhotoModel.h"
 
+
 @interface MZHomeViewController ()
 @property (nonatomic, strong)UIRefreshControl *refresh;
 @property (nonatomic, assign)NSInteger curIndex;
 @property (nonatomic, assign)BOOL isLoadComplete;
+
 @end
 static NSString *CellIdentifier = @"Cell";
 @implementation MZHomeViewController
@@ -48,6 +50,10 @@ static NSString *CellIdentifier = @"Cell";
     [_refresh addTarget:self action:@selector(refreshPhoto:) forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:self.refresh];
     self.isLoadComplete = NO;
+    
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(left_Clicked:)];
+    self.navigationItem.leftBarButtonItem = left;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,6 +86,24 @@ static NSString *CellIdentifier = @"Cell";
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+}
+- (void)left_Clicked:(id)sender{
+    NSLog(@"%@",[NSDate dateWithTimeIntervalSince1970:1409328000]);
+    CGFloat now = [[NSDate date] timeIntervalSince1970];
+    NSInteger iNow = (NSInteger)now;
+    iNow =iNow - (iNow + 8 * 3600) % 86400;
+    NSTimeInterval tNow = (NSTimeInterval)iNow;
+    NSLog(@"%@", [NSDate dateWithTimeIntervalSince1970:tNow]);
+
+//    [UIView animateWithDuration:0.5 animations:^{
+//        CGRect frame = self.view.frame;
+//        frame.origin.x += 100;
+//        self.view.frame = frame;
+//        frame = self.navigationController.navigationBar.frame;
+//        frame.origin.x += 100;
+//        [self.navigationController.navigationBar setFrame:frame];
+//    }];
+    
 }
 /*
 #pragma mark - Navigation

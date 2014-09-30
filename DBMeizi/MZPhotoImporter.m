@@ -49,7 +49,7 @@
     model.dataUrl = [value objectForKey:@"data-url"];
     model.dataUserurl = [value objectForKey:@"data-userurl"];
     model.dataWidth = [[value objectForKey:@"data-width"] floatValue];
-    model.src = [value objectForKey:@"src"];
+    model.src = [value objectForKey:@"data-src"];
 }
 
 + (void)downloadThumbnailForPhotoModel:(MZPhotoModel *)photoModel{
@@ -110,4 +110,29 @@
 //    }
 //    return downloadImages;
 //}
+/*
+ 
+ 苏宁发短信
+ NSURL *url = [NSURL URLWithString:@"https://member.suning.com/emall/AjaxSendValidationCodeCmd"];
+ 
+ //第二步，创建请求
+ 
+ NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+ 
+ [request setHTTPMethod:@"POST"];//设置请求方式为POST，默认为GET
+ 
+ NSString *str = @"scenario=mobileRegister&mobile=18569410844";//设置参数
+ 
+ NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+ 
+ [request setHTTPBody:data];
+ 
+ //第三步，连接服务器
+ 
+ NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+ 
+ NSString *str1 = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
+ 
+ NSLog(@"%@",str1);
+ */
 @end

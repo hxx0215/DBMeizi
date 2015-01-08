@@ -37,6 +37,7 @@
 }
 
 + (NSURLRequest *)allPhotoURLRequest:(NSInteger)pageIndex{
+    NSLog(@"ccc");
     NSString *urlString = [NSString stringWithFormat:@"http://dbmeizi.com?p=%d",pageIndex];
     NSLog(@"the url is :%@",urlString);
     return [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
